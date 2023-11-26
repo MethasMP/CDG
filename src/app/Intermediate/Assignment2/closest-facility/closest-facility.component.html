@@ -1,0 +1,14 @@
+
+
+      <div class="container">
+  <div class="map" #mapPanel style="height:90vh; width:70%; margin:10px; padding:15px; background-color:white; border-radius:10px;">
+      </div>
+  <div class="table" style="height:49vw;  width: 65vw; overflow-y: scroll;">
+        <table>  
+            <tr *ngFor="let temp of this.classestInfo;" (click)="onRowclick(temp) "[ngClass]="{'highlight': temp.clicked , 'normal': !temp.clicked}" (click)="zoomToRoute(temp.geometry)"> 
+              <td>{{temp.attributes.Name.substring(13)}}</td><br>
+           </tr> 
+        </table>
+      </div>
+    </div>
+  

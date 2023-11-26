@@ -1,0 +1,32 @@
+
+    
+<title>QueryTask</title>
+    <div class="container">
+<div #mapPanel  style="height:90vh; width:70%; margin:10px; padding:15px; background-color:white; border-radius:10px;">
+      <div  ></div>
+    </div>
+<div class="table" style="height:49vw;  width: 65vw; overflow-y: scroll;">
+     
+      <table>
+        <thead>
+          <tr>
+            <th>Subregion</th>
+            <th>State Name(full)</th>
+            <th>State Name(Abbr.)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feature of queriedFeatures.features; let i = index" (click)="onRowclick(feature, i)" [ngClass]="{'ColorSelect': selectedRowIndex == i}"> 
+            <td>{{feature.attributes.sub_region}}</td>
+            <td>{{feature.attributes.state_name }}</td>
+            <td>{{feature.attributes.state_abbr }}</td>
+              
+         </tr> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 
+ 
+  
+

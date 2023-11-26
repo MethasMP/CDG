@@ -1,0 +1,85 @@
+.table{
+  overflow: auto;
+  margin: 10px;
+  padding: 15px;
+  background-color: white;
+  border-radius:10px;
+  width: 50%;
+    
+    }
+  
+    th {
+    background-color: rgb(233, 177, 73);
+    }
+    .b {
+      width: 45vw; 
+      height: 90vh;
+      padding: 2px;
+      
+    }
+  
+  
+    .ColorSelect {
+      background-color: orange;
+      color: black;
+    }
+    .ctable {
+    box-shadow: 1 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 5px solid white;
+      padding: 5px;
+      border-radius: 20px;
+
+    }
+
+    .container {
+    height: 100%;
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    padding: 1.5%;
+    }
+
+    .button {
+  
+      padding-left: 20px;
+    }
+
+    #delete{
+      align-items: center;
+    }
+    p-button{
+      margin-right: 10px;
+    }
+
+    .directionsList:hover {
+      background-color: cyan;
+      border-radius:15px;
+      text-align: left;
+    }
+
+    div#directionsList{
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+ 
+    .directionsList {
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      cursor: pointer; /* Add this to show pointer cursor on hover */
+    }
+    
+    .directionsList:hover {
+      background-color: cyan;
+      border-radius: 15px;
+      text-align: left;
+    }
+    
+    .highlight {
+      background-color: rgb(79, 172, 222);
+      border-radius: 15px;
+      transition: all 0.3s;
+    }
+    
+    
+  

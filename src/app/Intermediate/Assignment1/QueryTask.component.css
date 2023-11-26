@@ -1,0 +1,54 @@
+table,th,td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 170px 237px 237px;
+    transition: all 0.3s;
+}
+
+.b {
+    width: 45vw;
+    height: 97vh
+}
+
+.table {
+    overflow: auto;
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px
+}
+
+th, td {
+    height: 40px;
+}
+
+tr:hover {
+    background-color: rgb(233, 151, 0);
+}
+tr:active{
+    background-color: rgb(198, 130, 3);
+}
+
+
+.ColorSelect {
+    background-color: orange;
+    color: black;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    background-color: rgb(235, 235, 235);
+}
+
+.map {
+    height: 100%;
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    width: 45vw;
+    height: 97vh
+}

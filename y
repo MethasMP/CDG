@@ -1,0 +1,2 @@
+export APPLE_SSH_ADD_BEHAVIOR=1
+

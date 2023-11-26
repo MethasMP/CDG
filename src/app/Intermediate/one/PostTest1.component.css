@@ -1,0 +1,80 @@
+body {
+    background-color: #ffffff;  
+    z-index: 99;
+    top: 20px;
+    right: 20px;
+}
+  
+  .table-container {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 10px;
+    
+  }
+
+ .button-container {
+    display: flex;
+    gap: 1em; /* ปรับระยะห่างตามที่ต้องการ */
+  }
+  
+  table {
+    width: 40vw;
+    max-height: 100vh;
+    border-collapse: collapse;
+  }
+  
+  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 8px;
+    text-align: left;
+    width: 30vw;
+  }
+  
+  td:hover,
+  td.highlighted {
+    background-color: pink;
+    cursor: pointer;
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+  }
+
+  .inputlat {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .lat {
+    margin-right: 15px;
+  }
+
+  .delbut {
+    position: absolute;
+    right: 20px;
+  }
+  .map-input {
+    height: 100%;
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    width: 45vw;
+    height: 97vh
+  }
+ 
+
+  .container {
+    height: 100%;
+    display: flex;
+    padding: 1.5%;
+    }

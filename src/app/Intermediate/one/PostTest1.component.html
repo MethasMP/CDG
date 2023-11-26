@@ -1,0 +1,59 @@
+<div class="container">
+
+
+
+<div class="map-input" #mapPanel style="width: 70vw; height: 97vh">
+
+    <div>
+      <div class="map">
+    
+      </div>
+      <div class="form">
+        <h2>Add Location</h2>
+        <input type="text" name="location" placeholder="Location" value="Bang Bo">
+        <input
+   
+  type="text"
+   
+  name="title"
+   
+  placeholder="Title">
+  
+        
+  <input
+   
+  type="text"
+   
+  name="lat"
+   
+  placeholder="Lat">
+  
+        
+  <input
+   
+  type="text"
+   
+  name="long"
+   
+  placeholder="Long">
+        <button type="submit">Add</button>
+        <button type="reset">Clear</button>
+      </div>
+    </div>
+ 
+</div>
+
+<div class="bookMark">
+  <h2>Bookmark</h2>
+    <div>
+      <div *ngFor="let temp of tempArea; let i = index" (cdivck)="onRowClick(temp)">
+        {{ i + 1 }}. {{ temp.title }}
+        <p-button class="delbut" (click)="removeData(temp)" pRipple styleClass="p-button-danger" icon="pi pi-trash"></p-button>
+        <br><br>
+      </div>
+    </div>
+</div>
+
+</div>
+
+

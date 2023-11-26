@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Assignment 1.1</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh;
+    }
+
+    .color-box {
+      flex-grow: 1; /* ขยายหรือหดตัวได้ตามขนาดของคอนเทนเนอร์ flex */
+      min-width: 50%; /* ความกว้างอย่างน้อย 50% ของขนาดคอนเทนเนอร์ */
+      height: 50vh; /* ความสูงอย่างน้อย 50% ของความสูงของหน้าต่างเบราว์เซอร์ */
+      box-sizing: border-box;
+    }
+
+    #red {
+      background-color: #FF0000;
+    }
+
+    #green {
+      background-color: #008800;
+    }
+
+    #blue {
+      background-color: #0000FF;
+    }
+
+    #black {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="color-box" id="red"></div>
+  <div class="color-box" id="green"></div>
+  <div class="color-box" id="blue"></div>
+  <div class="color-box" id="black"></div>
+</body>
+</html>
