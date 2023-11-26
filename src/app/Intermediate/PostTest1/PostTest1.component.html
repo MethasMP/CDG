@@ -2,58 +2,45 @@
 
 
 
-<div class="map-input" #mapPanel style="width: 70vw; height: 97vh">
+  <div class="map-input" #mapPanel style="width: 79vw; height: 97vh">
 
     <div>
-      <div class="map">
-    
-      </div>
+
       <div class="form">
-        <h2>Add Location</h2>
-        <input type="text" name="location" placeholder="Location" value="Bang Bo">
-        <input
-   
-  type="text"
-   
-  name="title"
-   
-  placeholder="Title">
-  
-        
-  <input
-   
-  type="text"
-   
-  name="lat"
-   
-  placeholder="Lat">
-  
-        
-  <input
-   
-  type="text"
-   
-  name="long"
-   
-  placeholder="Long">
-        <button type="submit">Add</button>
-        <button type="reset">Clear</button>
+        <div class="input-row">
+          <label class="input-label">Title:</label>
+          <input [(ngModel)]="title" type="text" pInputText/>
+        </div>
+        <div class="input-row">
+          <label class="input-label" for="mobile">Lat:</label>
+          <input pKeyFilter="int" type="text" [(ngModel)]="latitude" pInputText/>
+        </div>
+        <div class="input-row">
+          <label class="input-label" for="mobile">Long:</label>
+          <input pKeyFilter="int" type="text" [(ngModel)]="longitude" pInputText/>
+        </div>
+        <div class="button-row">
+          <p-button label="Add" styleClass="p-button-success" (click)="addData()"></p-button>
+          <p-button label="Clear" styleClass="p-button-danger" (click)="clearData()"></p-button>
+        </div>
       </div>
+      
+      
     </div>
- 
-</div>
 
-<div class="bookMark">
-  <h2>Bookmark</h2>
+  </div>
+
+  <div class="bookMark">
+    <h2>Bookmark</h2>
     <div>
-      <div *ngFor="let temp of tempArea; let i = index" (cdivck)="onRowClick(temp)">
-        {{ i + 1 }}. {{ temp.title }}
-        <p-button class="delbut" (click)="removeData(temp)" pRipple styleClass="p-button-danger" icon="pi pi-trash"></p-button>
+      <div *ngFor="let temp of tempArea; let i = index" (click)="onRowClick(temp)" class="bookmark-item">
+        <div class="bookmark-content">
+          {{ i + 1 }}. {{ temp.title }}
+          <p-button class="delete" [class.rounded]="true" (click)="removeData(temp)" pRipple styleClass="p-button-danger" icon="pi pi-trash"></p-button>
+        </div>
         <br><br>
       </div>
     </div>
-</div>
+  </div>
 
 </div>
-
-

@@ -1,80 +1,84 @@
-body {
-    background-color: #ffffff;  
-    z-index: 99;
-    top: 20px;
-    right: 20px;
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.button-row p-button {
+  margin: 0 5px; /* Adjust the horizontal margin as needed */
 }
   
-  .table-container {
-    width: 50%;
-    float: left;
-    padding: 20px;
-    overflow: auto;
-    border-radius: 10px;
-    
-  }
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.input-label {
+  width: 80px; /* Set the desired width for the labels */
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.button-row {
+  margin-top: 10px; /* Adjust as needed */
+}
 
  .button-container {
     display: flex;
     gap: 1em; /* ปรับระยะห่างตามที่ต้องการ */
   }
   
-  table {
-    width: 40vw;
-    max-height: 100vh;
-    border-collapse: collapse;
-  }
-  
-  th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
 
-  td {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 8px;
-    text-align: left;
-    width: 30vw;
-  }
-  
-  td:hover,
-  td.highlighted {
-    background-color: pink;
-    cursor: pointer;
-  }
-
-  .input {
-    display: flex;
-    align-items: center;
-  }
-
-  .inputlat {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-  }
-
-  .lat {
-    margin-right: 15px;
-  }
-
-  .delbut {
-    position: absolute;
-    right: 20px;
-  }
   .map-input {
-    height: 100%;
-    display: flex;
-    background-color: rgb(235, 235, 235);
-    width: 45vw;
-    height: 97vh
+    position: relative;
+    width: 78vw;
+  }
+
+  .bookmark-item {
+    background-color: rgb(10, 179, 230); /* Set your desired background color here */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 20vw;
+    height: 7vh;
+  }
+  
+  .form {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(184, 181, 181, 0.5); /* ใช้ rgba เพื่อทำให้พื้นหลังทะลุผ่าน (opacity) */
+    margin: 30px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .bookMark {
+    /* ตัวอย่างรูปแบบสำหรับ .bookMark (ถ้ามี) */
+    margin-top: 20px;
+    margin-left: 10px;
   }
  
 
   .container {
     height: 100%;
     display: flex;
-    padding: 1.5%;
     }
+
+    .bookmark-item {
+      margin-bottom: 10px;
+    }
+    
+    .bookmark-content {/* Set your desired background color here */
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .delete{
+      margin-top: -13px;
+      padding-left: 10x;
+     
+    }
+

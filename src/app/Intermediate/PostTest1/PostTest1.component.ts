@@ -32,8 +32,8 @@ export class PostTest1 implements OnInit {
   LineGuy:Graphic[]=[]
   tempArea:any = []
   title!: string;
-  latitude!: number;
-  longitude!: number;
+  latitude: number | null = null;
+  longitude: number | null = null;
   index!: number;
   marker: SimpleMarkerSymbol | null = null;
 
@@ -44,9 +44,19 @@ export class PostTest1 implements OnInit {
   }
   
   addData() {
-    if (this.longitude < -180 || this.longitude > 180 || this.latitude < -90 || this.latitude > 90) {
-      alert('value invalid');
-      return;}
+    if (
+      this.longitude == null ||
+      this.latitude == null ||
+      isNaN(this.latitude) ||
+      isNaN(this.longitude) ||
+      this.latitude < -90 ||
+      this.latitude > 90 ||
+      this.longitude < -180 ||
+      this.longitude > 180
+    ) {
+      alert('Invalid latitude or longitude value');
+      return;
+    }
 
     const newData = {
         title: this.title,
@@ -69,9 +79,10 @@ export class PostTest1 implements OnInit {
     
     this.mapView?.graphics.removeAll()
     const newCenter = new Point({
-      longitude: this.longitude,
-      latitude: this.latitude,
+      longitude: this.longitude ?? undefined,
+      latitude: this.latitude ?? undefined,
     });
+    
     this.marker = new SimpleMarkerSymbol({
       color: [226, 119, 40],
       outline: {
@@ -87,7 +98,7 @@ export class PostTest1 implements OnInit {
     this.mapView?.goTo(newCenter);}
 
 
-
+  
 removeData(data: any) {
   const index = this.tempArea.indexOf(data);
 
@@ -96,11 +107,11 @@ removeData(data: any) {
   }
 }
 
-  clearData(){
-    this.title;
-    this.latitude;
-    this.longitude;
-  }
+clearData() {
+  this.title = '';
+  this.latitude = null; // You can set this to null or any default value
+  this.longitude = null; // You can set this to null or any default value
+}
 
   onRowClick(temp: any) {
     this.title = temp.title;
@@ -108,8 +119,8 @@ removeData(data: any) {
     this.longitude = temp.longitude;
   
     const newCenter = new Point({
-      longitude: this.longitude,
-      latitude: this.latitude,
+      longitude: this.longitude ?? undefined,
+      latitude: this.latitude ?? undefined,
     });
   
     const marker = new SimpleMarkerSymbol({
@@ -124,12 +135,19 @@ removeData(data: any) {
       geometry: newCenter,
       symbol: marker,
     });
-
+  
+    // Remove previous graphics
     this.mapView?.graphics.removeAll();
+  
+    // Add the new graphic
     this.mapView?.graphics.add(pointGraphic);
-    this.mapView?.goTo(newCenter,{ duration: 1000 });
+  
+    // Zoom to the clicked point
+    this.mapView?.goTo(newCenter, { duration: 1000 });
+  
+    // Highlight the clicked row
     this.highlightRow(temp);
-  }    
+  }  
 
   highlightRow(state: any) {
     this.LineGuy.forEach((row: any) => {
