@@ -9,7 +9,7 @@ import { LayerListComponent } from './Intermediate/Assignment5/layer-list/layer-
 import { SwipeComponent } from './Intermediate/Assignment6/swipe/swipe.component';
 import { ProxyComponent } from './Intermediate/Assignment7/proxy/proxy.component';
 import { UMComponent } from './Intermediate/Assignment8/um/um.component';
-import { PostTest1 } from './Intermediate/one/PostTest1.component';
+import { PostTest1 } from './Intermediate/PostTest1/PostTest1.component';
 
 
 const routes: Routes = [
